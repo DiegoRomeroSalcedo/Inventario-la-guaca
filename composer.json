@@ -1,0 +1,22 @@
+{
+    "name": "diegosalcedo/inventario",
+    "description": "Proyecto de inventario la Guaca",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Proyecto\\": "src/",
+            "Config\\": "config/",
+            "Views\\": "lib/"
+        }
+    },
+    "authors": [
+        {
+            "name": "diego.salcedo"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "vlucas/phpdotenv": "5.6"
+    }
+}

@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Permitir encabezados personalizados
+    SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+
+    RewriteBase /inventario/public/
+
+    # Redirigir todas las solicitudes a index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+</IfModule>
